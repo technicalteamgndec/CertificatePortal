@@ -6,6 +6,7 @@ import AdminRequestManager from "@/components/AdminRequestManager";
 
 import Loader from "@/components/Loader";
 import { useRouter } from "next/navigation";
+import Footer from "@/components/Footer";
 
 export default function AdminPage() {
   const router = useRouter();
@@ -36,7 +37,7 @@ export default function AdminPage() {
         <header className="bg-white border-b border-gray-200 shadow-sm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
-              <h1 className="text-xl font-bold text-gray-800">Welcome, {session.user.name}</h1>
+              <h1 className="text-xl font-bold text-gray-800">Welcome, {session.user.name.toLocaleUpperCase()}</h1>
               <div className="flex items-center space-x-4">
                 <button
                     onClick={() => signOut({ callbackUrl: '/' })}
@@ -50,9 +51,9 @@ export default function AdminPage() {
         </header>
  
         <main className="container mx-auto p-4 sm:p-6 lg:p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Manage Certificate Requests</h2>
             <AdminRequestManager />
         </main>
+        <Footer className="pb-3" />
       </div>
     );
   }

@@ -4,6 +4,7 @@ import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import CertificateManager from "@/components/CertificateManager";
 import Loader from "@/components/Loader";
+import Footer from "@/components/Footer";
 
 export default function StudentDashboard() {
   const router = useRouter();
@@ -51,6 +52,8 @@ export default function StudentDashboard() {
       <main className="container mx-auto p-4 sm:p-6 lg:p-8">
         <CertificateManager />
       </main>
+
+      <Footer className="pb-3" />
     </div>
   );
 }

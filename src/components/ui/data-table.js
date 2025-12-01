@@ -298,7 +298,7 @@ export function DataTable({
           <DataTableViewOptions table={table} />
         </div>
       </div>
-      <div className="rounded-md border m-2 p-2">
+      <div className="rounded-md bg-white border m-2 p-2">
         <Table className="mb-2">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
